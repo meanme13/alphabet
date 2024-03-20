@@ -5,8 +5,27 @@
   </head>
   <body>
     <a-scene embedded arjs='detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+        <a-assets>
+            <a-asset-item id="c" src="c.glb"></a-asset-item>
+            <a-asset-item id="o" src="o.glb"></a-asset-item>
+            <a-asset-item id="r" src="r.glb"></a-asset-item>
+            <a-asset-item id="v" src="v.glb"></a-asset-item>
+          </a-assets>
+
         <a-marker type='barcode' value='10'>
-            <a-box position='0 1 -4' material='color: blue;'></a-box>
+            <a-entity gltf-model="#c" position="0 0 0"></a-entity>
+        </a-marker>
+        
+        <a-marker type='barcode' value='11'>
+            <a-entity gltf-model="#o" position="0 0 0"></a-entity>
+        </a-marker>
+        
+        <a-marker type='barcode' value='12'>
+            <a-entity gltf-model="#r" position="0 0 0"></a-entity>
+        </a-marker>
+        
+        <a-marker type='barcode' value='13'>
+            <a-entity gltf-model="#v" position="0 0 0"></a-entity>
         </a-marker>
 
         <a-entity camera></a-entity>
